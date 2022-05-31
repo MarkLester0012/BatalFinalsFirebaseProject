@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "549528295179",
+    "project_id": "batalfinalsfirebaseproject",
+    "storage_bucket": "batalfinalsfirebaseproject.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:549528295179:android:77781d54c9e8b6ac38b40e",
+        "android_client_info": {
+          "package_name": "com.example.batalfirebasefinalsproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "549528295179-j2uovmqoih6hb71cpqqpt2p8toekb775.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCB3cAzb_x2SdcxgjAbWHAE7z38Dsn6IHM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "549528295179-j2uovmqoih6hb71cpqqpt2p8toekb775.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
