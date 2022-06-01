@@ -21,8 +21,10 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class Login extends AppCompatActivity {
-    private TextView backButtonTextView;
-    private TextInputEditText textInputEditText_Email, textInputEditText_Password;
+
+    //Variables
+    private TextView backBTN;
+    private TextInputEditText emailEdit, passwordEdit;
     private Button loginButton;
     private String email, passcode;
     private ProgressDialog progressDialog;
@@ -30,20 +32,22 @@ public class Login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_page);
-        initialized();
-        backButtonTextView.setOnClickListener(new View.OnClickListener() {
+        refs();
+
+        backBTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 finish();
                 overridePendingTransition(0, 0);
-                startActivity(new Intent(Login.this, LandingPage.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_NO_ANIMATION));
+                startActivity(new Intent(Login.this, Landing.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_NO_ANIMATION));
             }
         });
+
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                email = String.valueOf(textInputEditText_Email.getText());
-                passcode = String.valueOf(textInputEditText_Password.getText());
+                email = String.valueOf(emailEdit.getText());
+                passcode = String.valueOf(passwordEdit.getText());
                 progressDialog = new ProgressDialog(Login.this);
                 progressDialog.setMessage("Logging in...");
                 progressDialog.show();
@@ -56,7 +60,7 @@ public class Login extends AppCompatActivity {
                                     progressDialog.dismiss();
                                     finish();
                                     overridePendingTransition(0, 0);
-                                    startActivity(new Intent(Login.this, HomePage.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_NO_ANIMATION));
+                                    startActivity(new Intent(Login.this, Signup.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_NO_ANIMATION));
                                 }
                                 else {
                                     try {
@@ -82,11 +86,12 @@ public class Login extends AppCompatActivity {
         });
     }
 
-    private void initialized(){
-        backButtonTextView = findViewById(R.id.backButtonTextView);
+    //Variable Assignments
+    private void refs(){
+        backBTN = findViewById(R.id.backButtonTextView);
         loginButton = findViewById(R.id.loginButton);
-        textInputEditText_Email = findViewById(R.id.textInputEditText_Email);
-        textInputEditText_Password = findViewById(R.id.textInputEditText_Password);
+        emailEdit = findViewById(R.id.textInputEditText_Email);
+        passwordEdit = findViewById(R.id.textInputEditText_Password);
     }
 
     private boolean isNetworkConnected() {
@@ -99,6 +104,6 @@ public class Login extends AppCompatActivity {
     public void onBackPressed() {
         finish();
         overridePendingTransition(0, 0);
-        startActivity(new Intent(Login.this, LandingPage.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_NO_ANIMATION));
+        startActivity(new Intent(Login.this, Landing.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_NO_ANIMATION));
     }
 }
