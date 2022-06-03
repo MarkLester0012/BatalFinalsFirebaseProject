@@ -12,7 +12,7 @@
         android:layout_width="274dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="156dp"
-        android:fontFamily="@font/death_note_font"
+        android:fontFamily="@font/valorant"
         android:text="Batal Finals Firebase CRUD"
         android:textAlignment="center"
         android:textColor="@color/white"

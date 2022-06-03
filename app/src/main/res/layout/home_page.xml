@@ -29,7 +29,7 @@
                 android:layout_height="wrap_content"
                 android:text="Firebase Crud"
                 android:textColor="@color/white"
-                android:fontFamily="@font/death_note_font"
+                android:fontFamily="@font/valorant"
                 android:textSize="35dp"
                 android:textStyle="bold" />
 
