@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="156dp"
         android:fontFamily="@font/valorant"
-        android:text="Batal Finals Firebase CRUD"
+        android:text="Batal Firebase CRUD"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="30sp"
