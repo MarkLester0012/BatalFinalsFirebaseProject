@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/second_wallpaper"
+    android:background="@drawable/splash_background_final"
     tools:context=".Landing">
 
 
@@ -19,7 +19,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:cardBackgroundColor="@color/dark_blue"
         tools:ignore="MissingConstraints">
 
         <LinearLayout
@@ -34,10 +33,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/death_note_font"
-                android:text="- FIREBASE CRUD -"
+                android:text="FIREBASE CRUD"
                 android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="30sp"
+                android:textColor="@color/black"
+                android:textSize="32sp"
                 android:textStyle="bold" />
 
             <android.widget.Button
@@ -57,7 +56,7 @@
                 android:gravity="center"
                 android:text="Sign Up"
                 android:textAllCaps="true"
-                android:textColor="@color/white"
+                android:textColor="#150101"
                 android:textSize="12sp"
                 android:textStyle="bold"
                 tools:layout_editor_absoluteX="46dp"

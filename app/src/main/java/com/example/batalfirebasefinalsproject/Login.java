@@ -60,7 +60,7 @@ public class Login extends AppCompatActivity {
                                     progressDialog.dismiss();
                                     finish();
                                     overridePendingTransition(0, 0);
-                                    startActivity(new Intent(Login.this, Home.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_NO_ANIMATION));
+                                    startActivity(new Intent(Login.this, Signup.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_NO_ANIMATION));
                                 }
                                 else {
                                     try {

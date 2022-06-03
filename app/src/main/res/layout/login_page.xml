@@ -4,23 +4,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/second_wallpaper"
+    android:background="@color/black"
     tools:context=".Login">
 
+    <TextView
+        android:id="@+id/loadingScreenText"
+        android:layout_width="274dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/death_note_font"
+        android:text="Batal Finals Firebase CRUD"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.192" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/media_card_view"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="196dp"
-        android:background="@color/dark_blue"
-        app:cardBackgroundColor="@color/dark_blue"
-        app:cardElevation="5dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="152dp"
+        android:background="@color/white"
         app:cardCornerRadius="15dp"
+        app:cardElevation="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/loadingScreenText"
+        app:layout_constraintVertical_bias="0.625">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -34,9 +52,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/death_note_font"
-                android:text="- Welcome! -"
+                android:text="Welcome!"
                 android:textAlignment="center"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="32sp"
                 android:textStyle="bold" />
 
@@ -49,9 +67,7 @@
                 android:layout_marginRight="10dp"
                 android:hint="Email"
                 android:imeOptions="actionNext"
-                android:inputType="textEmailAddress"
-                android:textColorHint="@color/white"
-                android:theme="@style/TextFields">
+                android:inputType="textEmailAddress">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/textInputEditText_Email"
@@ -60,7 +76,6 @@
                     android:layout_gravity="center"
                     android:inputType="textEmailAddress"
                     android:maxLines="1"
-                    android:textColor="@color/white"
                     android:textSize="16dp"
                     tools:ignore="TouchTargetSizeCheck" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -71,10 +86,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:textColorHint="@color/white"
-                android:theme="@style/TextFields"
-                app:passwordToggleEnabled="true"
-                app:passwordToggleTint="@color/white">
+                app:passwordToggleEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/textInputEditText_Password"
@@ -106,7 +118,7 @@
                 android:gravity="center"
                 android:text="Forgot Password?"
                 android:textAllCaps="true"
-                android:textColor="@color/white"
+                android:textColor="#150101"
                 android:textSize="12sp"
                 android:textStyle="bold"
                 tools:layout_editor_absoluteX="46dp"
@@ -122,7 +134,7 @@
                 android:gravity="center"
                 android:text="Back"
                 android:textAllCaps="true"
-                android:textColor="@color/white"
+                android:textColor="#150101"
                 android:textSize="12sp"
                 android:textStyle="bold"
                 tools:layout_editor_absoluteX="46dp"

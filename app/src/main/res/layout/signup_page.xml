@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/second_wallpaper"
+    android:background="@drawable/splash_background_final"
     tools:context=".Signup">
 
     <androidx.cardview.widget.CardView
@@ -12,7 +12,6 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:background="@color/white"
-        app:cardBackgroundColor="@color/dark_blue"
         app:cardCornerRadius="15dp"
         app:cardElevation="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -33,15 +32,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/death_note_font"
-                android:text="- Sign Up -"
+                android:text="Sign Up"
                 android:textAlignment="center"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="32sp"
                 android:textStyle="bold" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/textInputLayoutEmail"
-                android:textColorHint="@color/white"
                 android:layout_width="240dp"
                 android:layout_gravity="center"
                 android:layout_height="wrap_content"
@@ -54,7 +52,6 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/id_edittxt_email"
-                android:theme="@style/TextFields"
                 android:layout_width="match_parent"
                 android:layout_gravity="center"
                 android:layout_height="wrap_content"
@@ -66,9 +63,6 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/textInputLayoutPassword"
-                android:theme="@style/TextFields"
-                android:textColorHint="@color/white"
-                app:passwordToggleTint="@color/white"
                 android:layout_width="240dp"
                 android:layout_gravity="center"
                 android:layout_height="wrap_content"
@@ -85,12 +79,8 @@
                     android:maxLines="1"
                     android:textSize="16dp" />
             </com.google.android.material.textfield.TextInputLayout>
-
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/textInputLayoutConfirmPassword"
-                android:theme="@style/TextFields"
-                android:textColorHint="@color/white"
-                app:passwordToggleTint="@color/white"
                 android:layout_width="240dp"
                 android:layout_gravity="center"
                 android:layout_height="wrap_content"
@@ -108,7 +98,6 @@
                     android:maxLines="1"
                     android:textSize="16dp" />
             </com.google.android.material.textfield.TextInputLayout>
-
             <android.widget.Button
                 android:id="@+id/signUpButton"
                 android:layout_width="240dp"
@@ -118,10 +107,8 @@
                 android:background="@drawable/shape"
                 android:text="Sign Up"
                 android:textColor="@color/white" />
-
             <TextView
                 android:id="@+id/id_txtview_already"
-                android:textColor="@color/white"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
@@ -129,13 +116,13 @@
                 android:gravity="center"
                 android:text="Already have an account?"
                 android:textAllCaps="true"
+                android:textColor="#150101"
                 android:textSize="12sp"
                 android:textStyle="bold"
                 tools:layout_editor_absoluteX="46dp"
                 tools:layout_editor_absoluteY="90dp" />
             <TextView
                 android:id="@+id/backButtonTextView"
-                android:textColor="@color/white"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto_regular"
@@ -144,6 +131,7 @@
                 android:gravity="center"
                 android:text="Back"
                 android:textAllCaps="true"
+                android:textColor="#150101"
                 android:textSize="12sp"
                 android:textStyle="bold"
                 tools:layout_editor_absoluteX="46dp"
