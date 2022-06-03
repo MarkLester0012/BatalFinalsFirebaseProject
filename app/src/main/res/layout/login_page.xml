@@ -4,23 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@color/valorant"
     tools:context=".Login">
 
+    <ImageView
+        android:id="@+id/valorant_logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="108dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/valorant_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/media_card_view"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="196dp"
+        android:layout_marginTop="20dp"
         android:background="@color/dark_blue"
-        app:cardBackgroundColor="@color/dark_blue"
-        app:cardElevation="5dp"
+        app:cardBackgroundColor="@color/dark_valorant"
         app:cardCornerRadius="15dp"
+        app:cardElevation="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/valorant_logo">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -55,12 +67,12 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/textInputEditText_Email"
-                    android:textColor="@color/white"
                     android:layout_width="240dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:inputType="textEmailAddress"
                     android:maxLines="1"
+                    android:textColor="@color/white"
                     android:textSize="16dp"
                     tools:ignore="TouchTargetSizeCheck" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -78,13 +90,13 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/textInputEditText_Password"
-                    android:textColor="@color/white"
                     android:layout_width="240dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:hint="Password"
                     android:inputType="textPassword"
                     android:maxLines="1"
+                    android:textColor="@color/white"
                     android:textSize="16dp" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -94,7 +106,7 @@
                 android:layout_height="48dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="15dp"
-                android:background="@drawable/shape"
+                android:background="@drawable/valorant_shape"
                 android:text="Login"
                 android:textColor="@color/white" />
 

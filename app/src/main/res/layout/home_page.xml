@@ -4,35 +4,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@color/dark_valorant"
     tools:context=".Home">
 
     <LinearLayout
         android:id="@+id/Layoutbottomcurvedmaroonheader"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="130dp"
+        android:background="@color/dark_valorant"
         android:orientation="vertical"
-        android:background="@color/dark_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:id="@+id/LayoutWelcome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:layout_marginTop="17dp"
             android:gravity="center"
-            android:layout_marginTop="17dp">
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/welcome"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/valorant"
                 android:text="Firebase Crud"
                 android:textColor="@color/white"
-                android:fontFamily="@font/valorant"
                 android:textSize="35dp"
                 android:textStyle="bold" />
-
 
 
         </LinearLayout>
@@ -41,23 +43,23 @@
             android:id="@+id/LayoutSearchAndMessageBubble"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
             android:layout_marginTop="17dp"
+            android:gravity="center"
+            android:orientation="horizontal"
             app:layout_constraintTop_toBottomOf="@id/LayoutWelcome">
 
             <AutoCompleteTextView
                 android:id="@+id/homesearch"
                 android:layout_width="350dp"
                 android:layout_height="35dp"
-                android:background="@drawable/curvewhite"
                 android:layout_marginRight="10dp"
+                android:background="@drawable/curvewhite"
                 android:clickable="true"
-                android:paddingLeft="20dp"
                 android:hint="Search"
-                android:inputType="textAutoComplete"
                 android:imeOptions="actionSearch"
-                android:maxLines="1">
+                android:inputType="textAutoComplete"
+                android:maxLines="1"
+                android:paddingLeft="20dp">
 
             </AutoCompleteTextView>
 
@@ -88,7 +90,7 @@
         android:layout_gravity="center"
         android:layout_marginHorizontal="30dp"
         android:layout_marginBottom="20dp"
-        android:background="@drawable/shape"
+        android:background="@drawable/valorant_shape"
         android:elevation="5dp"
         android:text="Add Product"
         android:textColor="@color/white"

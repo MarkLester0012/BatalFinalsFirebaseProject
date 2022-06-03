@@ -8,5 +8,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="dark_blue">#001d28</color>
+    <color name="valorant">#dc3d4b</color>
+    <color name="dark_valorant">#111723</color>
+    <color name="light_valorant">#fa4454</color>
+
 
 </resources>

@@ -4,8 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@color/valorant"
     tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/valorant_logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="264dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/valorant_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txtViewLandingPage"
@@ -23,20 +36,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/splash_logo"
-        app:layout_constraintVertical_bias="0.198" />
+        app:layout_constraintTop_toBottomOf="@+id/valorant_logo"
+        app:layout_constraintVertical_bias="0.096" />
 
-    <ImageView
-        android:id="@+id/splash_logo"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="292dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/firebase_icon"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

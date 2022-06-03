@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
     }
     //Hooks
     public void refs(){
-            logo = findViewById(R.id.splash_logo);
+            logo = findViewById(R.id.valorant_logo);
         }
 
 }
