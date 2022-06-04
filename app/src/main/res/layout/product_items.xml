@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="12dp"
+
+    android:layout_marginHorizontal="12dp"
+    android:layout_marginVertical="5dp"
     android:background="@drawable/item_shape">
 
     <LinearLayout
@@ -14,56 +16,58 @@
         android:gravity="center"
         android:orientation="vertical"
         android:paddingVertical="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-    <LinearLayout
-        android:id="@+id/layoutProductImage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:orientation="horizontal">
-
-        <ImageView
-            android:id="@+id/imageViewProductImage"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_gravity="center"
-            android:scaleType="centerCrop"
-            android:src="@drawable/valorant_icon"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/txtViewProductQuantity"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/layoutProductImage"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="0"
-            android:textColor="@color/white"
-            android:textSize="14dp"
-            android:textStyle="bold" />
+            android:layout_gravity="center"
+            android:orientation="vertical">
 
-    </LinearLayout>
+            <ImageView
+                android:id="@+id/imageViewProductImage"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="1dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/valorant_icon" />
+
+            <TextView
+                android:id="@+id/txtViewProductQuantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
 
 
         <LinearLayout
             android:id="@+id/layoutJoinFirmMessageUserItemDetails"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="30dp"
             android:orientation="horizontal">
 
             <LinearLayout
-                android:layout_width="120dp"
+                android:layout_width="130dp"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="60dp"
+                android:layout_marginEnd="20dp"
                 android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/txtViewProductName"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Product Name"
                     android:textColor="@color/white"
@@ -71,7 +75,7 @@
                     android:textStyle="bold" />
 
                 <LinearLayout
-                    android:layout_width="120dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
@@ -80,6 +84,7 @@
                         android:layout_width="15dp"
                         android:layout_height="15dp"
                         android:layout_gravity="center"
+                        android:layout_marginRight="3dp"
                         android:scaleType="centerCrop"
                         android:src="@drawable/valorant_icon_red"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -89,9 +94,9 @@
 
                     <TextView
                         android:id="@+id/txtViewProductPrice"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text=" Product Price"
+                        android:text="Product Price"
                         android:textColor="@color/white"
                         android:textSize="14dp"
                         android:textStyle="bold" />
@@ -100,30 +105,40 @@
 
             </LinearLayout>
 
-            <Button
-                android:id="@+id/btnEditProduct"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="60dp"
-                android:layout_height="35dp"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:background="@color/dark_valorant"
-                android:text="Edit"
-                android:textAllCaps="false"
-                android:textColor="@color/light_valorant"
-                android:textSize="10dp"
-                tools:ignore="TouchTargetSizeCheck" />
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/btnDeleteProduct"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="60dp"
-                android:layout_height="35dp"
-                android:layout_gravity="center"
-                android:text="Delete"
-                android:textAllCaps="false"
-                android:textColor="@color/dark_valorant"
-                android:textSize="10dp"
-                tools:ignore="TouchTargetSizeCheck" />
+                <Button
+                    android:id="@+id/btnEditProduct"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/edit_button_shape"
+                    android:text="Edit"
+                    android:textAllCaps="false"
+                    android:textColor="@color/light_valorant"
+                    android:textSize="10dp"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    android:id="@+id/btnDeleteProduct"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="60dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:text="Delete"
+                    android:textAllCaps="false"
+                    android:textColor="@color/dark_valorant"
+                    android:textSize="10dp"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+            </LinearLayout>
 
         </LinearLayout>
 

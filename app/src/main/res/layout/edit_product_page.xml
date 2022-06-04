@@ -26,11 +26,11 @@
             android:textStyle="bold" />
 
         <ImageView
-            android:layout_width="100dp"
+            android:layout_width="150dp"
             android:layout_height="100dp"
             android:layout_gravity="center"
             android:layout_marginTop="30dp"
-            android:scaleType="centerCrop"
+            android:scaleType="centerInside"
             android:id="@+id/productImageIcon"
             android:src="@drawable/valorant_icon" />
 
@@ -101,6 +101,7 @@
                 android:id="@+id/textInputEditText_PPrice"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/white"
                 android:layout_gravity="center"
                 android:inputType="numberDecimal"
                 android:theme="@style/TextFields"
@@ -126,6 +127,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:inputType="text"
+                android:textColor="@color/white"
                 android:theme="@style/TextFields"
                 android:maxLines="2"
                 android:textSize="16dp"
@@ -192,7 +194,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="30dp"
             android:background="@drawable/dark_valorant_shape"
-            android:text="Add Product"
+            android:text="Edit Product"
             android:textColor="@color/white"
             tools:ignore="DuplicateSpeakableTextCheck" />
 

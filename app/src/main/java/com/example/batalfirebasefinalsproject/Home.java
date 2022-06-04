@@ -42,7 +42,7 @@ public class Home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home_page);
         refs();
-        products.setLayoutManager(new GridLayoutManager(this, 2));
+        products.setLayoutManager(new GridLayoutManager(this, 1));
         //textViewUsername.setText(FirebaseAuth.getInstance().getCurrentUser().getEmail());
         add_product_btn.setOnClickListener(new View.OnClickListener() {
             @Override
