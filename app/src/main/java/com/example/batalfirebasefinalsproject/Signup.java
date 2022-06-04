@@ -14,15 +14,12 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.batalfirebasefinalsproject.Models.User;
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
-import com.google.firebase.database.FirebaseDatabase;
 
 
 public class Signup extends AppCompatActivity {
@@ -109,26 +106,10 @@ public class Signup extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()) {
-                    userID = FirebaseAuth.getInstance().getCurrentUser().getUid();
-                    FirebaseDatabase.getInstance().getReference("Users").child(userID).setValue(new User(userID,"","","",FirebaseAuth.getInstance().getCurrentUser().getEmail(),"",true)).addOnCompleteListener(new OnCompleteListener<Void>() {
-                        @Override
-                        public void onComplete(@NonNull Task<Void> task) {
-                            if(task.isSuccessful()) {
-                                progressDialog.dismiss();
-                                Toast.makeText(Signup.this, "Successfully Registered!", Toast.LENGTH_SHORT).show();
-                                finish();
-                                startActivity(new Intent(Signup.this, Landing.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_NO_ANIMATION));
-                            }
-                        }
-                    }).addOnFailureListener(new OnFailureListener() {
-                        @Override
-                        public void onFailure(@NonNull Exception e) {
-                            progressDialog.dismiss();
-                            Toast.makeText(Signup.this, "Storing in RDB Failed for " + FirebaseAuth.getInstance().getCurrentUser().getEmail(), Toast.LENGTH_SHORT).show();
-                            finish();
-                            startActivity(new Intent(Signup.this, Landing.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_NO_ANIMATION));
-                        }
-                    });
+                    progressDialog.dismiss();
+                    Toast.makeText(Signup.this, "Successfully Registered!", Toast.LENGTH_SHORT).show();
+                    finish();
+                    startActivity(new Intent(Signup.this, Landing.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_NO_ANIMATION));
                 } else {
                     try {
                         throw task.getException();
