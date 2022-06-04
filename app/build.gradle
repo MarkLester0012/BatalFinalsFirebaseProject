@@ -1,5 +1,6 @@
 plugins {
     id 'com.android.application'
+    id 'com.google.gms.google-services'
 }
 
 android {
@@ -29,11 +30,6 @@ android {
         viewBinding true
     }
 }
-apply plugin: 'com.android.application'
-
-// Add this line
-apply plugin: 'com.google.gms.google-services'
-
 
 dependencies {
 

@@ -118,7 +118,7 @@ public class AddProduct extends AppCompatActivity {
                 if(!String.valueOf(product_name.getText()).equals("") && !String.valueOf(product_price.getText()).equals("") && !String.valueOf(product_description.getText()).equals("") && !String.valueOf(quantity.getText()).equals("0")) {
                     final CharSequence[] options = { "Yes" ,"No" };
                     AlertDialog.Builder builder = new androidx.appcompat.app.AlertDialog.Builder(AddProduct.this);
-                    builder.setTitle("Are you sure you want to continue?");
+                    builder.setTitle("Add Product?");
                     builder.setItems(options, new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int item) {
